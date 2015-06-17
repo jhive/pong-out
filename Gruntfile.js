@@ -31,6 +31,22 @@ module.exports = function(grunt){
         }
       },
 
+      connect: {
+        server: {
+          options: {
+            port: 9999,
+            keepalive: true,
+            base: "deploy/"
+          }
+        },
+        watch: {
+          options: {
+            port: 9999,
+            base: "deploy"
+          }
+        }
+      },
+
       watch: {
         scripts: {
           files: ['Gruntfile.js', 'src/**/*.js'],
@@ -47,7 +63,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
-
-  grunt.registerTask('default', ['jshint', 'concat', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat', 'connect:watch', 'watch']);
 };

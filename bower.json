@@ -1,0 +1,21 @@
+{
+  "name": "randomship",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jhive/randomship",
+  "authors": [
+    "Anthony Garreffa <anthony.garreffa@gm.com>"
+  ],
+  "dcription": "A quick lunchtime project",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_componnts",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1"
+  }
+}
