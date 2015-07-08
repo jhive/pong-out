@@ -3,12 +3,6 @@ module.exports = function(grunt){
       jshint: {
         all: {
           src: ['src/**/*.js'] //Globbing
-        },
-        works: {
-          src: ['src/works.js']
-        },
-        broken: {
-          src:['src/borked.js']
         }
       },
 
@@ -27,6 +21,12 @@ module.exports = function(grunt){
           cwd: 'src/',
           expand: true,
           src: ['**/*.html'],
+          dest: 'deploy/'
+        },
+        styles: {
+          cwd:'src/',
+          expand: true,
+          src: ['styles/**/*.css'],
           dest: 'deploy/'
         }
       },
@@ -48,13 +48,20 @@ module.exports = function(grunt){
       },
 
       watch: {
+        options: {
+          livereload: true
+        },
         scripts: {
           files: ['Gruntfile.js', 'src/**/*.js'],
-          tasks: ['jshint']
+          tasks: ['jshint', 'concat']
         },
         html: {
           files:['src/**/*.html'],
           tasks: ['copy:html']
+        },
+        styles: {
+          files: ['src/styles/**/*.css'],
+          tasks: ['copy:styles']
         }
       }
   });
@@ -65,5 +72,5 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['jshint', 'concat', 'connect:watch', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat', 'copy', 'connect:watch', 'watch']);
 };
