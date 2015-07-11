@@ -1,2 +1,15 @@
-html {
+.brick {
+  display: inline-block;
+  background-color: red;
+  width: 20px;
+  height: 60px;
+  margin: 2px;
+}
+
+.brick-col {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
 }

@@ -28,6 +28,12 @@ module.exports = function(grunt){
           expand: true,
           src: ['styles/**/*.css'],
           dest: 'deploy/'
+        },
+        templates: {
+          cwd: 'src/',
+          expand: true,
+          src: ['**/*.tmpl'],
+          dest: 'deploy/'
         }
       },
 
@@ -58,6 +64,10 @@ module.exports = function(grunt){
         html: {
           files:['src/**/*.html'],
           tasks: ['copy:html']
+        },
+        templates: {
+          files: ['src/**/*.tmpl'],
+          tasks: ['copy:templates']
         },
         styles: {
           files: ['src/styles/**/*.css'],
