@@ -13,3 +13,10 @@
 .hidden {
   visibility: hidden;
 }
+
+/*136*340*/
+brick-board {
+	position: absolute;
+	left: calc(50% - 68px);
+	top: calc(50% - 170px);
+}
