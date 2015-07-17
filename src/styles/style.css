@@ -14,9 +14,26 @@
   visibility: hidden;
 }
 
-/*136*340*/
+/* 136*340 */
 brick-board {
 	position: absolute;
 	left: calc(50% - 68px);
 	top: calc(50% - 170px);
+}
+
+/* 20*60 */
+#player1 {
+	position: absolute;
+	visibility: visible;
+	top: calc(50% - 10px);
+	background-color: lightblue;
+
+}
+
+#player2 {
+	position: absolute;
+	visibility: visible;
+	top: calc(50% - 10px);
+	background-color: lightblue;
+	left: calc(100% - 38px);
 }
