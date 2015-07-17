@@ -9,7 +9,6 @@ angular.module('app.rendering.brick-board', [
         bricks: '='
       },
       link: function(scope){
-        console.log(typeof scope.bricks);
       }
     };
   });

@@ -1,9 +1,26 @@
+#game-board {
+  display: block;
+  height: 350px;
+  width: 600px;
+  border: 1px solid;
+}
+
+brick-board {
+  position:absolute;
+  left: 240px;
+  clear: both;
+  display:block;
+  margin: 0 auto;
+  width: 147px;
+}
+
 .brick {
   display: inline-block;
   background-color: red;
   width: 20px;
   height: 60px;
   margin: 2px;
+  border: 1px solid;
 }
 
 .brick-col {
@@ -12,4 +29,27 @@
 
 .hidden {
   visibility: hidden;
+}
+
+player {
+  position: relative;
+}
+.player {
+  height: 80px;
+  position: relative;
+  display: block;
+  background-color: blue;
+  margin: 5px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.green {
+  background-color: green;
 }
