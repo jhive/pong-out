@@ -1,9 +1,26 @@
+#game-board {
+  display: block;
+  height: 350px;
+  width: 600px;
+  border: 1px solid;
+}
+
+brick-board {
+  position:absolute;
+  left: 240px;
+  clear: both;
+  display:block;
+  margin: 0 auto;
+  width: 147px;
+}
+
 .brick {
   display: inline-block;
   background-color: red;
   width: 20px;
   height: 60px;
   margin: 2px;
+  border: 1px solid;
 }
 
 .brick-col {
@@ -14,26 +31,25 @@
   visibility: hidden;
 }
 
-/* 136*340 */
-brick-board {
-	position: absolute;
-	left: calc(50% - 68px);
-	top: calc(50% - 170px);
+player {
+  position: relative;
+}
+.player {
+  height: 80px;
+  position: relative;
+  display: block;
+  background-color: blue;
+  margin: 5px;
 }
 
-/* 20*60 */
-#player1 {
-	position: absolute;
-	visibility: visible;
-	top: calc(50% - 10px);
-	background-color: lightblue;
-
+.right {
+  float: right;
 }
 
-#player2 {
-	position: absolute;
-	visibility: visible;
-	top: calc(50% - 10px);
-	background-color: lightblue;
-	left: calc(100% - 38px);
+.left {
+  float: left;
+}
+
+.green {
+  background-color: green;
 }

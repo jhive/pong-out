@@ -4,10 +4,11 @@
   </head>
   <body ng-app="pong">
 
-  	<div id = 'player1' class="brick" class = 'player'></div>
-  	<div id = 'player2' class="brick" class = 'player'></div>
-
-    <brick-board bricks='game.bricks'></brick-board>
+    <div id='game-board'>
+      <player id='player1' class='left'></player>
+      <brick-board bricks='game.bricks'></brick-board>
+      <player id='player2' class='right'></player>
+    </div>
 
     <script src='vendor/angular/angular.js'></script>
     <script src='main.js'></script>
