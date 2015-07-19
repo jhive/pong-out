@@ -11,15 +11,12 @@ angular.module('app.components.player', [])
         elem.parent().on('mousemove', function(e){
           console.log(e.clientY);
 
-          if (e.clientY > 264) {
-            elem.css('top', 264 + 'px');
-          }
-          else if (e.clientY < -5){
-            elem.css('top', -5 + 'px');
-          }
-          else {
-            elem.css('top', e.clientY + "px");
-          }
+          var location = e.clientY > 264 ? 264 : e.clientY;
+          location = location < -5 ? -5 : location;
+
+          elem.css('top',location + 'px');
+          console.log(location);
+
         });
       });
 
