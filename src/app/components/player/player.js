@@ -9,8 +9,14 @@ angular.module('app.components.player', [])
 
       elem.on('mousedown', function(){
         elem.parent().on('mousemove', function(e){
-          console.log(e);
-          elem.css('top', e.clientY + "px");
+          console.log(e.clientY);
+
+          var location = e.clientY > 264 ? 264 : e.clientY;
+          location = location < -5 ? -5 : location;
+
+          elem.css('top',location + 'px');
+          console.log(location);
+
         });
       });
 
